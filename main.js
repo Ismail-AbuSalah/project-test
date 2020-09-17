@@ -43,7 +43,8 @@ listbtn.addEventListener("click", function(){
     
     addbtn.onclick=function(){
       if(input.value!==""){
-                
+        const licom={}
+        user[newname].push(input.value)       
         // Creating li elemnt & append to ul then reset input value to ""
         const li = document.createElement("li")
         li.innerHTML="<button>C</button>"+input.value+"<button>rm</button>"
@@ -59,9 +60,8 @@ listbtn.addEventListener("click", function(){
           }else {
             li.style.textDecoration= "line-through"
           }
+          
         }
-        
-      
 
         limodbtn[1].onclick=function(){
           li.remove()
@@ -70,3 +70,5 @@ listbtn.addEventListener("click", function(){
     }
   }
 })
+
+
