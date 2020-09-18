@@ -1,7 +1,26 @@
-h3 {
-  color: blue;
+body {
+  background-color: bisque;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  border: brown 10 px;
+  justify-content: center;
+  flex-direction: row;
+  gap: 30px
+
+
+}
+p {
+  background-color: chocolate;
+  border-radius: 40px;
+  text-align: center;
+  border-width: 20px;
+  border-color: darkgreen;
+  display: flex;
+  align-self: start  ;
 }
 
-/* .add{
-  color: aqua;
-} */
+div {
+  border: solid black ;
+  border-radius: 30px;
+  
+}
