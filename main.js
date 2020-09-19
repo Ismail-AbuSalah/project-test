@@ -1,6 +1,7 @@
 const body = document.querySelector("body")
 const listname = document.querySelector(".listname")
 const listbtn = document.querySelector(".listmaker")
+const main = document.querySelector(".test")
 const user = {}
 
 
@@ -21,11 +22,9 @@ listbtn.addEventListener("click", function(){
     const newname = listname.value
     user[newname]=[]
     // Selecting Elemnts inside the P container & Add Functionality to "Edit listname" & "Delete the list"  Buttons
-    p.innerHTML=newname+"<button>Edit</button><button>Delete</button>"
+    p.innerHTML=newname+"<button>Delete</button>"
     const modbtn = p.querySelectorAll("button")
-
-    modbtn[0].onclick
-    modbtn[1].onclick=function(){
+    modbtn[0].onclick=function(){
       lidiv.remove()
     }
 
@@ -36,7 +35,7 @@ listbtn.addEventListener("click", function(){
     input.placeholder="Add ToDo Task!"
 
     // Append the Container to Body elemnt & reset the list name to Empty String ""
-    body.append(lidiv)
+    main.append(lidiv)
     listname.value=""
 
     // Now Adding functionality to the buttons inside the List Container 

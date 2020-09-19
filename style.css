@@ -1,26 +1,97 @@
-body {
-  background-color: bisque;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  display: flex;
-  border: brown 10 px;
-  justify-content: center;
-  flex-direction: row;
-  gap: 30px
-
-
+body{
+  background-color: rgb(255, 213, 122);
 }
-p {
-  background-color: chocolate;
-  border-radius: 40px;
+header{
+  border: solid rgb(51, 134, 160);
+  /* border-radius: 20px; */
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding-bottom: 10px;
   text-align: center;
-  border-width: 20px;
-  border-color: darkgreen;
-  display: flex;
-  align-self: start  ;
+  line-height: 40px;
+  font-family: Segoe UI;
+  font-size: 30px;
+  margin: auto;
+  margin-top: 20px;
+  max-width: 500px;
 }
 
-div {
-  border: solid black ;
-  border-radius: 30px;
+.maker {
+  
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  border: 3px solid rgb(214, 59, 59);
+  border-radius: 40px;
+  background-color: rgb(231, 163, 86);
+}
+
+.listname{
+  border: 2px solid black ;
+  border-radius: 40px;
+  outline: none;
+  color:rgb(0, 0, 0);
+  text-align: center;
+  height: 40px;
+  width: 75%;
+  margin: 3px;
+  background-color: rgb(253, 205, 255);
+  
+}
+
+#addbtton{
+  cursor: pointer;
+  margin: 0px 0px 0px 6px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  border: 2px solid rgb(253, 205, 255);
+  border-radius: 40px;
+  font-size: 40px;
+ 
+}
+
+#icon {
+  
+}
+  
+main {
+  margin: 2%;
+  border: solid rgb(51, 134, 160);
+  /* border-radius: 20px; */
+  border-left: none;
+  border-right: none;
+  border-radius: none;
+  background-color: rgb(250, 248, 137);
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: ROW;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+main > div {
+  width: 300px;
+  border: 3px solid rgb(214, 59, 59);
+  border-radius: 10px;
+  margin: 5px;
+  background-color: rgb(231, 163, 86);
+  position: relative;
+  
+
+}
+
+main > div > ul > li {
+  margin: 5px;
+  list-style-type: none;
+  border: 2px solid brown;
+  border-width: 0px 0px 2px 0px ;
+  
   
 }
