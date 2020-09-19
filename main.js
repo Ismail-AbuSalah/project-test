@@ -10,21 +10,22 @@ listbtn.addEventListener("click", function(){
     
     // Creating div container 
     const lidiv = document.createElement("div")
-    lidiv.innerHTML="<p></p>"+"<ul></ul>"+"<input><button>Add</button>"
+    lidiv.innerHTML="<p></p>"+"<ul></ul>"+"<input><i></i>"
 
     // Selecting Elemnts inside the Div container
     const p = lidiv.querySelector("p")
     const input = lidiv.querySelector("input")
-    const addbtn = lidiv.querySelector("button")
+    const addbtn = lidiv.querySelector("i")
     const ul = lidiv.querySelector("ul")
-
+    addbtn.className="far fa-plus-square"
     // Saving input value (List Title) in a variable
     const newname = listname.value
     user[newname]=[]
     // Selecting Elemnts inside the P container & Add Functionality to "Edit listname" & "Delete the list"  Buttons
-    p.innerHTML=newname+"<button>Delete</button>"
-    const modbtn = p.querySelectorAll("button")
-    modbtn[0].onclick=function(){
+    p.innerHTML=newname+"<i></i>"
+    const modbtn = p.querySelector("i")
+    modbtn.className="far fa-times-circle"
+    modbtn.onclick=function(){
       lidiv.remove()
     }
 
@@ -46,13 +47,14 @@ listbtn.addEventListener("click", function(){
         user[newname].push(input.value)       
         // Creating li elemnt & append to ul then reset input value to ""
         const li = document.createElement("li")
-        li.innerHTML="<button>C</button>"+input.value+"<button>rm</button>"
+        li.innerHTML="<i></i>"+input.value+"<i></i>"
         ul.append(li)
         input.value=""
         
         // Selecting Buttons inside the list elemnts & adding functionality 
-        const limodbtn = li.querySelectorAll("button")
-
+        const limodbtn = li.querySelectorAll("i")
+        limodbtn[0].classList="far fa-check-circle"
+        limodbtn[0].style.float="left"
         limodbtn[0].onclick=function(){
           if(li.style.textDecoration=== "line-through"){
             li.style.textDecoration= "none"
@@ -61,7 +63,8 @@ listbtn.addEventListener("click", function(){
           }
           
         }
-
+        limodbtn[1].className="far fa-times-circle"
+        limodbtn[1].style.float="right"
         limodbtn[1].onclick=function(){
           li.remove()
         }

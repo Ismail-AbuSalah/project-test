@@ -28,6 +28,8 @@ header{
   border: 3px solid rgb(214, 59, 59);
   border-radius: 40px;
   background-color: rgb(231, 163, 86);
+  position: sticky;
+  top : 0 
 }
 
 .listname{
@@ -67,31 +69,65 @@ main {
   border-left: none;
   border-right: none;
   border-radius: none;
-  background-color: rgb(250, 248, 137);
+  background-color: rgb(255, 235, 146);
   font-family: sans-serif;
   display: flex;
   justify-content: center;
   flex-direction: ROW;
   gap: 30px;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 main > div {
   width: 300px;
-  border: 3px solid rgb(214, 59, 59);
-  border-radius: 10px;
+  border: 2px solid  rgb(231, 163, 86);
+  border-radius: 7px;
   margin: 5px;
-  background-color: rgb(231, 163, 86);
-  position: relative;
-  
+  background-image: linear-gradient( rgb(255, 249, 214),rgb(255, 209, 208));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+
+}
+
+main > div > ul{
+  margin: 10px ;
+  padding: 0px;
+  width: 80%;
 
 }
 
 main > div > ul > li {
-  margin: 5px;
+  margin: 7px 0px 7px 0px;
+  padding-bottom: 5px;
   list-style-type: none;
   border: 2px solid brown;
   border-width: 0px 0px 2px 0px ;
-  
-  
+}
+
+main > div > p {
+  width: 90%;
+  height: 30px;
+  font-family: sans-serif;
+  line-height: 25px;
+  font-size: 25px;
+  text-align: left;
+  padding: 5px 5px 5px 5px;
+  margin: 10px 0 0 0 ;
+  padding: 0;
+  border-bottom: 2px solid black;
+  text-transform: capitalize; 
+   
+}
+
+P > i {
+  cursor: pointer;
+  float: right;
+  color: blue;
+}
+
+li > i {
+  cursor: pointer;
 }
