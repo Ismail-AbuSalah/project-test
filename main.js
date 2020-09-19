@@ -10,7 +10,7 @@ listbtn.addEventListener("click", function(){
     
     // Creating div container 
     const lidiv = document.createElement("div")
-    lidiv.innerHTML="<p></p>"+"<ul></ul>"+"<input><i></i>"
+    lidiv.innerHTML="<p></p>"+"<ul></ul>"+"<p><input><i></i></p>"
 
     // Selecting Elemnts inside the Div container
     const p = lidiv.querySelector("p")
@@ -55,6 +55,9 @@ listbtn.addEventListener("click", function(){
         const limodbtn = li.querySelectorAll("i")
         limodbtn[0].classList="far fa-check-circle"
         limodbtn[0].style.float="left"
+        limodbtn[0].style.color="green"
+        limodbtn[0].style.paddingRight="10px"
+
         limodbtn[0].onclick=function(){
           if(li.style.textDecoration=== "line-through"){
             li.style.textDecoration= "none"
@@ -65,6 +68,7 @@ listbtn.addEventListener("click", function(){
         }
         limodbtn[1].className="far fa-times-circle"
         limodbtn[1].style.float="right"
+        limodbtn[1].style.color="red"
         limodbtn[1].onclick=function(){
           li.remove()
         }
